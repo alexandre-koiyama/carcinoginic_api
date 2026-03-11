@@ -1,0 +1,10 @@
+venv/
+env/
+__pycache__/
+*.pyc
+.env
+cred.py
+daily_calls.json
+
+# Mac files
+.DS_Store
