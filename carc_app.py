@@ -26,7 +26,7 @@ def home():
 
 def update_daily_count():
     today = datetime.now().strftime("%Y-%m-%d")
-    COUNT_FILE = "/Users/alexandrekoiyama/Desktop/PROJECTS/carcinogenic_new/daily_calls.json"
+    COUNT_FILE = "daily_calls.json"
 
     try:
         with open(COUNT_FILE) as f:
@@ -60,7 +60,7 @@ def analyze_image():
 
         # ---- Load IARC reference table ----
         with open(
-            "/Users/alexandrekoiyama/Desktop/PROJECTS/carcinogenic_new/carcinogens.csv",
+            "carcinogens.csv",
             "r",
             encoding="utf-8"
         ) as f:
@@ -180,4 +180,4 @@ def analyze_blocked():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
